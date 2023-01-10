@@ -8,10 +8,11 @@ const getHttpRequest = (server) => {
             {
                 method: 'get',
                 url: server.url,
-                timeout: 5000
+                // timeout: 5000
             }
         )
             .then(res => {
+                server.status = res.status;
                 if (res.status >= 200 && res.status <= 299) {
                     server.response = 1;
                     callback(null, server)
@@ -22,6 +23,7 @@ const getHttpRequest = (server) => {
                 }
             })
             .catch(err => {
+                
                 server.response = 0;
                 callback(null, server);
             })
