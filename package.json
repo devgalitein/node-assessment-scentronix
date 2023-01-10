@@ -1,0 +1,23 @@
+{
+  "name": "scentronix_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "automock": false,
+    "setupFiles": [
+      "./test/setupJest.js"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.2.4",
+    "axios": "^1.2.2",
+    "jest": "^29.3.1",
+    "jest-fetch-mock": "^3.0.3"
+  }
+}
